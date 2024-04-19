@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "src":"assets/images/burger4o.jpg",
+        "alt":"Chicken burger",
+        "active":"active",
+        "description":"110g chicken, BBQ and Horseradish sauce, Lettuce, Tomato, Pickles, Purple onion"
+    },
+    {
+        "id":2,
+        "src":"assets/images/burger2o.jpg",
+        "alt":"Bacon beef burger",
+        "active":"",
+        "description":"150g of fresh beef, Fried bacon, Lettuce, Tomato, Pickles, Red onion, Mustard sauce"
+    },
+    {
+        "id":3,
+        "src":"assets/images/burger6o.jpg",
+        "alt":"Double chicken burger",
+        "active":"",
+        "description":"220g chicken, BBQ and Horseradish sauce, Lettuce, Tomato, Pickles, Purple onion"
+    }
+]

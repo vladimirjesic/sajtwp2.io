@@ -1,0 +1,38 @@
+@media screen and (max-width: 992px) {
+    #hero-section{
+        height: 900px;
+    }
+   .brdr-r{
+    border: none;
+   }
+   .brdr-l{
+    border: none;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    #hero-section{
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #hero-section{
+        height: 500px;
+    }
+
+    #heading{
+        padding-top: 50px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 13px;
+    }
+
+}

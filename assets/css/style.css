@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: ls;
+}
+
+@font-face {
+    font-family: ls;
+    src: url(../fonts/LeagueSpartan-Regular.ttf);
+  }
+  
+
+p{
+    font-family: ls; 
+    font-size: 16px; 
+}
+
+h1, h2{
+    font-family: ls;
+    font-size: 32px;
+}
+
+h3{
+    font-family: ls;
+    font-size: 24px;
+}
+
+img{
+    width: 100%;
+}
+
+a:visited{
+    font-family: ls; 
+    font-size: 16px; 
+    color: #F9B508;
+}
+
+a:link{
+    color:#F9B508;
+}
+
+a:active{
+    color: #F9B508;
+}
+
+.linkh:hover{
+    color:white;
+}
+
+.linkha:active{
+    color:white;
+}
+
+#hero-section{
+    background-image: url(../images/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+    color:#F9B508;
+}
+
+#overlay{
+    background-color: rgba(8, 8, 8, 0.7);
+    height: 1000px;
+    width: 100%;
+}
+
+#heading{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 200px;
+    line-height: 100px;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+.btnc{
+    background-color: #F9B508;
+    color: black;
+}
+
+.btnc:hover{
+    background-color:#F9B508;
+    color: black;
+}
+
+.btnc:active{
+    background-color:#F9B508;
+    color: black;
+}
+
+.btnc:visited{
+    background-color:#F9B508;
+    color: black;
+}
+
+.btn{
+    background-color: #F9B508;
+    color: black;
+}
+
+.btn:hover{
+    background-color:#F9B508;
+    color: black;
+}
+
+.btn:active{
+    background-color:#F9B508;
+    color: black;
+}
+
+.btn:visited{
+    background-color:#F9B508;
+    color: black;
+}
+
+#main{
+    padding: 70px 40px;
+}
+
+#main-2{
+    padding: 70px 40px;
+    color:#F9B508;
+}
+
+.imgh{
+    height: 800px;
+}
+
+.brdr-r {
+    border-right: 1px solid #F9B508;
+  }
+  
+  .brdr-l {
+    border-left: 1px solid #F9B508;
+  }
+
+  #contact{
+    padding: 70px 40px;
+  }
+
+  .fa-solid {
+    font-size: 30px;
+  }
+  
+  .fa-brands {
+    font-size: 30px;
+  }
+
+
+   form {
+    color: black;
+    padding-top: 60px;
+    text-align: center;
+  }
+  form input[type=text] {
+    width: 70%;
+    background-color: #F9B508;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+   form input[type=email] {
+    width: 70%;
+    background-color: #F9B508;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  form textarea {
+    width: 70%;
+    background-color: #F9B508;
+    color: blackf;
+    margin-bottom: 20px;
+  }
+ 
+
+  .pad{
+    padding-top: 60px;
+  }
+
+.pad1{
+    padding-top: 80px;
+}
+
+
+
+  header{
+    background-color: black;
+  }
+
+  .noback{
+    background-color: transparent;
+  }
+
+  .italic{
+    font-style: italic;
+  }
+
+  #errorName{
+    display: none;
+  }
+  
+  #errorLName{
+    display: none;
+  }
+
+  #errorEmail{
+    display: none;
+  }
+
+  #errorQuestion{
+    display: none;
+  }
+
+  #carouselExampleCaptions{
+    margin: 0px auto;
+  }

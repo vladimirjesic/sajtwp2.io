@@ -1,0 +1,26 @@
+[
+    {
+        "text":"HOME",
+        "href":"index.html"
+    },
+    {
+        "text":"MENU",
+        "href":"menu.html"
+    },
+    {
+        "text":"ABOUT US",
+        "href":"about.html"
+    },
+    {
+        "text":"GALLERY",
+        "href":"gallery.html"
+    },
+    {
+        "text":"ORDER",
+        "href":"order.html"
+    },
+    {
+        "text":"AUTHOR",
+        "href":"author.html"
+    }
+]
