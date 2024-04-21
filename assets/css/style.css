@@ -228,3 +228,11 @@ a:active{
   #carouselExampleCaptions{
     margin: 0px auto;
   }
+
+  #burgers{
+    margin-top: 100px;
+  }
+
+  .hide{
+    display: none;
+  }

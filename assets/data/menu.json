@@ -1,0 +1,124 @@
+[
+    {
+        "id":1,
+        "name":"Regular Burger",
+        "src":"assets/images/burger1.jpg",
+        "category":1,
+        "meat":1,
+        "size":1,
+        "description":"110gr fresh beef, BBQ and Horseradish sauce, Lettuce, Tomato, Pickles, Purple onion",
+        "price": 600
+    },
+    {
+        "id":2,
+        "name":"Bacon Burger",
+        "src":"assets/images/burger2.jpg",
+        "category":1,
+        "meat":1,
+        "size":2,
+        "description":"150g of fresh beef, Fried bacon, Lettuce, Tomato, Pickles, Red onion, Mustard sauce",
+        "price": 800
+    },
+    {
+        "id":3,
+        "name":"Regular Chicken Burger",
+        "src":"assets/images/burger3.jpg",
+        "category":1,
+        "meat":2,
+        "size":1,
+        "description":"110g chicken, BBQ and Horseradish sauce, Lettuce, Tomato, Pickles, Purple onion",
+        "price": 800
+    },
+    {
+        "id":4,
+        "name":"Cheeseburger",
+        "src":"assets/images/burger4.jpg",
+        "category":1,
+        "meat":1,
+        "size":2,
+        "description":"150 g of fresh beef, Cheddar cheese, Musard sauce, Tomato, Lettuce, Pickles, Caramelized onions",
+        "price": 850
+    },
+    {
+        "id":5,
+        "name":"Chicken Cheeseburger",
+        "src":"assets/images/burger5.jpg",
+        "category":1,
+        "meat":2,
+        "size":2,
+        "description":"150g of fresh chicken, Cheddar cheese, Musard sauce, Tomato, Lettuce, Pickles, Caramelized onions",
+        "price": 600
+    },
+    {
+        "id":6,
+        "name":"Double Chicken Cheeseburger",
+        "src":"assets/images/burger6.jpg",
+        "category":1,
+        "meat":2,
+        "size":3,
+        "description":"300g of fresh chicken, Cheddar cheese, Musard sauce, Tomato, Lettuce, Pickles, Caramelized onions",
+        "price": 1200
+    },
+    {
+        "id":7,
+        "name":"Beef Sandwich",
+        "src":"assets/images/sandwich1.jpg",
+        "category":2,
+        "meat":1,
+        "size":1,
+        "description":"100g of fresh beef, Cheddar cheese, Tomato, Lettuce, Pickles, Caramelized onions in fresh bread",
+        "price": 400
+    },
+    {
+        "id":8,
+        "name":"Chicken Cheesesandwich",
+        "src":"assets/images/sandwich2.jpg",
+        "category":2,
+        "meat":2,
+        "size":2,
+        "description":"150g of fresh chicken, Cheddar cheese, cream, Caramelized onions in fresh bread",
+        "price": 650
+    },
+    {
+        "id":9,
+        "name":"Double Beef Sandwich",
+        "src":"assets/images/sandwich3.jpg",
+        "category":2,
+        "meat":1,
+        "size":3,
+        "description":"300g of fresh beef, Cheddar cheese, Tomato, Lettuce, Pickles, Caramelized onions in fresh bread",
+        "price": 700
+    },
+    {
+        "id":10,
+        "name":"Fries",
+        "src":"assets/images/fries.jpg",
+        "category":3,
+        "meat":10,
+        "size":2,
+        "description":"Fried potato 180g",
+        "price": 300
+    },
+    {
+        "id":11,
+        "name":"Onion Rings",
+        "src":"assets/images/onion.jpg",
+        "category":3,
+        "meat":10,
+        "size":2,
+        "description":"Fried onion 200g",
+        "price": 400
+    },
+    {
+        "id":12,
+        "name":"Sauces",
+        "src":"assets/images/sauces.jpg",
+        "category":3,
+        "meat":10,
+        "size":2,
+        "description":"10 different kinds of sauces",
+        "price": 600
+    }
+
+
+]

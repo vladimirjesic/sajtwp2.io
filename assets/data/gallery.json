@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "href":"assets/images/gallery1.jpg",
+        "alt":"Burger on plate"
+    },
+    {
+        "id":2,
+        "href":"assets/images/gallery2.jpg",
+        "alt":"Three burgers"
+    },
+    {
+        "id":3,
+        "href":"assets/images/gallery3.jpg",
+        "alt":"Burger with fries"
+    },
+    {
+        "id":4,
+        "href":"assets/images/gallery4.jpg",
+        "alt":"Table"
+    },
+    {
+        "id":5,
+        "href":"assets/images/gallery5.jpg",
+        "alt":"Meal"
+    },
+    {
+        "id":6,
+        "href":"assets/images/gallery6.jpg",
+        "alt":"People in restaurant"
+    },
+    {
+        "id":7,
+        "href":"assets/images/gallery7.jpg",
+        "alt":"Three beers"
+    },
+    {
+        "id":8,
+        "href":"assets/images/gallery8.jpg",
+        "alt":"Guiness beer"
+    },
+    {
+        "id":9,
+        "href":"assets/images/gallery9.jpg",
+        "alt":"Beer"
+    }
+]

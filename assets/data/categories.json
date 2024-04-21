@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "name":"Burgers"
+    },
+    {
+        "id":2,
+        "name":"Sandwiches"
+    },
+    {
+        "id":3,
+        "name":"Add-ons"
+    }
+]
