@@ -34,6 +34,59 @@
           </nav>
     </header>
 
+    <div id="orderedItems" class="container-fluid">
+      <div class="row pt-5">
+        <div class="col-12">
+          <h2 class="text-center"> ORDERED ITEMS</h2>
+        </div>
+      </div>
+      <div id="items" class="row">
+
+      </div>
+
+      </div>
+  
+
+    <div id="order-form" class="container-fluid">
+      <div class="row pt-5">
+        <div class="col-12">
+          <h2 class="text-center"> ORDER FORM</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-12 p-5">
+          <p>Fill this form to complete your order!</p>
+        </div>
+      </div>
+      <div class="row text-center d-flex justify-content-evenly">
+        <div class="col-12 col-lg-6">
+          <form action="#" method="post" id="contact-form" class="pb-5">
+            <label for="fname">Name</label>
+            <br/>
+            <input type="text" placeholder="Your name..." id="fname" name="fname"/>
+            <p id="errorName">Enter a valid name! - Must begin with uppercase letter and between 3 and 10 characters</p>
+            <br/>
+            <label for="lname">Last name</label>
+            <br/>
+            <input type="text" placeholder="Your last name..." id="lname" name="lname"/>
+            <p id="errorLName">Enter a valid last name! - Must begin with uppercase letter and between 3 and 10 characters</p>
+            <br/>
+            <label for="email">Email</label>
+            <br/>
+            <input type="email" placeholder="Your email..." id="email" name="email"/>
+            <p id="errorEmail">Enter a valid email!</p>
+            <br/>
+            <label for="question">Your question</label>
+            <br/>
+            <textarea name="question" id="question" cols="50" rows="10" placeholder="Text..."></textarea>
+            <p id="errorQuestion">Enter a valid question! - Must begin with uppercase letter and have at least 4 characters</p>
+            <br/>
+            <input type="button" class="btn btnc" value="Submit question" id="btn"/>
+        </form>
+        </div>
+      </div>
+    </div>
+
 
     <footer class="bg-black text-white text-center" id="ft">
     </footer>

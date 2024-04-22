@@ -236,3 +236,8 @@ a:active{
   .hide{
     display: none;
   }
+
+  #items{
+    text-align: center;
+    margin: 0px auto;
+  }

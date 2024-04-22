@@ -40,24 +40,93 @@ window.onload = function(){
         printGallery(result);
     })
 
+    printOrder();
+
+    
 
     $(document).on("change", "#categories", change);
     $(document).on("change", "#meat", change);
     $(document).on("change", "#sizes", change);
     $(document).on("change", "#sort", change);
     $(document).on("click", ".order", click);
+    $(document).on("click", ".deleteBtn", del);
+}
+
+function del(){
+    
+    // var productId = $(this).attr("id");
+    // var orderedItems = getFromLS("order");
+    
+    // // localStorage.removeItem("order");
+    // var undeletedProducts= orderedItems.filter(product => product["id"] != productId);
+    // console.log(undeletedProducts)
+    // // saveLS("order", undeletedProducts);
+    // // printOrder();
+
+}
+
+function printOrder(){
+    let counter = 1;
+    let content="";
+    let orderFromLS = getFromLS("order");
+    if(orderFromLS==null){
+        content+=`<div class="alert alert-danger col-12" role="alert">
+        There are no ordered products, go back to the menu page to select your order!
+      </div>`
+    }
+    else{
+
+        content+=`<div class="col-12">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>`
+    //         <tr>
+    //           <th scope="row">1</th>
+    //           <td>Mark</td>
+    //           <td>Otto</td>
+    //           <td>@mdo</td>
+    //         </tr>
+    //       </tbody>
+    //     </table>
+    //   </div>`
+        for(let ord of orderFromLS){
+            for(let or of ord){
+                content+=`<tr>
+                      <th scope="row">${counter++}</th>
+                      <td>${or.name}</td>
+                      <td>${or.price}</td>
+                      <td><button id="${or.id}" type="button" class="btn btnc deleteBtn">Delete</button></td>
+                    </tr>`
+            }
+        }
+        content+=`</tbody>
+        </table>
+        </div>`;
+
+    }
+    $("#items").html(content);
 }
 
 function click(){
-    console.log("Z")
     var productId = $(this).attr("id");
-    console.log(productId);
     let products = getFromLS("menu");
-    selectedProduct= products.filter(product => product["id"] == productId);
-    console.log(selectedProduct);
-    // let arrSelectedProducts = getFromLS("order");
-    // arrSelectedProducts.push(selectedProduct);
-    // saveLS("order", arrSelectedProducts);
+    var selectedProduct= products.filter(product => product["id"] == productId);
+    let arrSelectedProducts = [];
+    let arrOrderedProducts = getFromLS("order");
+    if(arrOrderedProducts!=null){
+        for(let product of arrOrderedProducts){
+            arrSelectedProducts.push(product)
+        }
+    }
+    arrSelectedProducts.push(selectedProduct);
+    saveLS("order", arrSelectedProducts);
 }
 
 function printGallery(imgs){
