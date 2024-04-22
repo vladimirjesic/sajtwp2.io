@@ -209,11 +209,11 @@ a:active{
     font-style: italic;
   }
 
-  #errorName{
+  #errorfname{
     display: none;
   }
   
-  #errorLName{
+  #errorlname{
     display: none;
   }
 
@@ -222,6 +222,20 @@ a:active{
   }
 
   #errorQuestion{
+    display: none;
+  }
+
+  #errorPhone{
+    display: none;
+  }
+ 
+  #errororderLname{
+    display: none;
+  }
+  #errororderFname{
+    display: none;
+  }
+  #errororderAdress{
     display: none;
   }
 

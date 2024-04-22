@@ -60,28 +60,44 @@
       </div>
       <div class="row text-center d-flex justify-content-evenly">
         <div class="col-12 col-lg-6">
-          <form action="#" method="post" id="contact-form" class="pb-5">
+          <form action="#" method="post" id="final-form" class="pb-5">
             <label for="fname">Name</label>
             <br/>
-            <input type="text" placeholder="Your name..." id="fname" name="fname"/>
-            <p id="errorName">Enter a valid name! - Must begin with uppercase letter and between 3 and 10 characters</p>
+            <input type="text" placeholder="Your name..." id="orderFname" name="fname"/>
+            <p id="errororderFname">Enter a valid name! - Must begin with uppercase letter and between 3 and 10 characters</p>
             <br/>
             <label for="lname">Last name</label>
             <br/>
-            <input type="text" placeholder="Your last name..." id="lname" name="lname"/>
-            <p id="errorLName">Enter a valid last name! - Must begin with uppercase letter and between 3 and 10 characters</p>
+            <input type="text" placeholder="Your last name..." id="orderLname" name="lname"/>
+            <p id="errororderLname">Enter a valid last name! - Must begin with uppercase letter and between 3 and 10 characters</p>
             <br/>
-            <label for="email">Email</label>
+            <label for="adress">Adress</label>
             <br/>
-            <input type="email" placeholder="Your email..." id="email" name="email"/>
-            <p id="errorEmail">Enter a valid email!</p>
+            <input type="text" placeholder="Your adress..." id="adress" name="adress"/>
+            <p id="errororderAdress">Enter a valid email!</p>
             <br/>
-            <label for="question">Your question</label>
+            <label for="phone">Phone number</label>
             <br/>
-            <textarea name="question" id="question" cols="50" rows="10" placeholder="Text..."></textarea>
-            <p id="errorQuestion">Enter a valid question! - Must begin with uppercase letter and have at least 4 characters</p>
+            <input type="text" placeholder="Your phone number..." id="phone" name="phone"/>
+            <p id="errorPhone">Enter a valid phone number!</p>
             <br/>
-            <input type="button" class="btn btnc" value="Submit question" id="btn"/>
+            <br/>
+            <p>How do you want to make the payment?</p>
+            <input type="radio" name="payment" id="cash" value="Cash">
+            <label for="payment">Cash</label>
+            <input type="radio" name="payment" id="card" value="Card">
+            <label for="payment">Card</label>
+            <br/>
+            <br/>
+            <label for="transport">Choose a delivery method</label>
+            <select class="form-control" id="transport">
+              <option value="0">Choose...</option>
+              <option value="1">Bike - 45-60 min estimated time of delivery - 100 din </option>
+              <option value="2">Electric scooter - 30-45 min estimated time of delivery - 200 din </option>
+              <option value="3">Car - 15-30 min estimated time of delivery - 300 din</option>
+            </select>
+            <br/>
+            <input type="button" class="btn btnc" value="Complete your order!" id="orderBtn"/>
         </form>
         </div>
       </div>

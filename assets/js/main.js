@@ -50,26 +50,167 @@ window.onload = function(){
     $(document).on("change", "#sort", change);
     $(document).on("click", ".order", click);
     $(document).on("click", ".deleteBtn", del);
+    $(document).on("blur", "#orderFname", checkOrderName);
+    $(document).on("blur", "#orderFname", checkFields);
+    $(document).on("blur", "#orderLname", checkOrderName);
+    $(document).on("blur", "#orderLname", checkFields);
+    $(document).on("blur", "#fname", checkOrderName);
+    $(document).on("blur", "#lname", checkOrderName);
+    $(document).on("blur", "#adress", checkOrderAdress);
+    $(document).on("blur", "#adress", checkFields);
+    $(document).on("blur", "#phone", checkPhone);
+    $(document).on("blur", "#phone", checkFields);
+    $(document).on("change", "#payment", checkFields);
+    $(document).on("change", "#transport", checkFields);
+    $(document).on("click", "#orderBtn", completeOrder);
+    $("#orderBtn").prop("disabled",true);
+    $(document).on("blur", "#email", checkEmail);
+    $(document).on("blur", "#question", checkQuestion);
+}
+
+function checkQuestion(){
+    var regExQuestion=/^[A-Z][a-z]{3,}/;
+    var question = $("#question").val();
+    if(!regExQuestion.test(question))
+    {
+       document.getElementById("errorQuestion").style.display="block";
+       document.getElementById("question").style.border="3px solid red";
+    }
+    else{
+        document.getElementById("errorQuestion").style.display="none";
+        document.getElementById("question").style.border="3px solid green";
+    }
+}
+
+function checkEmail(){
+    var regExEmail = /^[a-z-\.]+@([a-z-]+\.)+[a-z-]{2,4}$/;
+    var email = $("#email").val();
+        if(!regExEmail.test(email))
+    {
+       document.getElementById("errorEmail").style.display="block";
+       document.getElementById("email").style.border="3px solid red";
+    }
+    else{
+        document.getElementById("errorEmail").style.display="none";
+        document.getElementById("email").style.border="3px solid green";
+    }
+}
+
+function completeOrder(){
+    window.location.href = 'index.html';
+    localStorage.removeItem("order");
+}
+
+function checkFields(){
+    var filedCounter = 0;
+    if(document.getElementById("orderFname").style.border=="3px solid green"){
+        filedCounter++;
+        console.log(filedCounter)
+    }
+    if(document.getElementById("orderLname").style.border=="3px solid green"){
+        filedCounter++;
+        console.log(filedCounter)
+    }
+    if(document.getElementById("adress").style.border=="3px solid green"){
+        filedCounter++;
+        console.log(filedCounter)
+    }
+    if(document.getElementById("phone").style.border=="3px solid green"){
+        filedCounter++;
+        console.log(filedCounter)
+    }
+    if ($('input[name=payment]:checked').length > 0) {
+        filedCounter++;
+        console.log(filedCounter)
+    } 
+    if($("#transport").val()!="0"){
+        filedCounter++;
+        console.log(filedCounter);
+    }
+
+    if(filedCounter==6){
+        $("#orderBtn").prop("disabled",false);
+    }
+    else{
+        $("#orderBtn").prop("disabled",true);
+    }
+
+
+}
+
+
+function checkPhone(){
+    var regExPhone = /^[0-9]{8,10}$/
+    var phone = $(this).val();
+    if(!regExPhone.test(phone)){
+        document.getElementById("errorPhone").style.display="block";
+        document.getElementById("phone").style.border="3px solid red";
+    }
+    else{
+        document.getElementById("errorPhone").style.display="none";
+        document.getElementById("phone").style.border="3px solid green";
+    }
+    checkFields;
+}
+
+function checkOrderAdress(){
+    var regExAdress=/^[a-zA-Z]+(?:\s+[a-zA-Z]+)*\s+\d+$/;
+    var adress = $(this).val();
+    if(!regExAdress.test(adress)){
+        document.getElementById("errororderAdress").style.display="block";
+        document.getElementById("adress").style.border="3px solid red";
+    }
+    else{
+        document.getElementById("errororderAdress").style.display="none";
+        document.getElementById("adress").style.border="3px solid green";
+    }
+    checkFields;
+}
+
+function checkOrderName(){
+    var regExName=/^[A-Z][a-z]{2,10}$/;
+    var name = $(this).val();
+    var idError = "error";
+    var id = $(this).attr("id")
+    idError += id;
+    if(!regExName.test(name))
+    {
+        document.getElementById(idError).style.display="block";
+        document.getElementById(id).style.border="3px solid red";
+    }
+    else{
+        document.getElementById(idError).style.display="none";
+        document.getElementById(id).style.border="3px solid green";
+    }
+    checkFields;
 }
 
 function del(){
     
-    // var productId = $(this).attr("id");
-    // var orderedItems = getFromLS("order");
+    var productId = $(this).attr("id");
+    var orderedItems = getFromLS("order");
     
-    // // localStorage.removeItem("order");
+    localStorage.removeItem("order");
+    var undeletedProducts = [];
+    for(var ord of orderedItems){
+            if(ord.id!=productId){
+                undeletedProducts.push(ord);
+            }        
+    }
+    console.log(undeletedProducts);
     // var undeletedProducts= orderedItems.filter(product => product["id"] != productId);
     // console.log(undeletedProducts)
-    // // saveLS("order", undeletedProducts);
-    // // printOrder();
+    saveLS("order", undeletedProducts);
+    printOrder();
 
 }
+
 
 function printOrder(){
     let counter = 1;
     let content="";
     let orderFromLS = getFromLS("order");
-    if(orderFromLS==null){
+    if(orderFromLS==null || orderFromLS.length==0){
         content+=`<div class="alert alert-danger col-12" role="alert">
         There are no ordered products, go back to the menu page to select your order!
       </div>`
@@ -97,14 +238,12 @@ function printOrder(){
     //     </table>
     //   </div>`
         for(let ord of orderFromLS){
-            for(let or of ord){
                 content+=`<tr>
                       <th scope="row">${counter++}</th>
-                      <td>${or.name}</td>
-                      <td>${or.price}</td>
-                      <td><button id="${or.id}" type="button" class="btn btnc deleteBtn">Delete</button></td>
+                      <td>${ord.name}</td>
+                      <td>${ord.price}</td>
+                      <td><button id="${ord.id}" type="button" class="btn btnc deleteBtn">Delete</button></td>
                     </tr>`
-            }
         }
         content+=`</tbody>
         </table>
@@ -117,7 +256,12 @@ function printOrder(){
 function click(){
     var productId = $(this).attr("id");
     let products = getFromLS("menu");
-    var selectedProduct= products.filter(product => product["id"] == productId);
+    for(var prod of products){
+        if(prod.id==productId){
+            var selectedProduct = prod;
+        }
+    }
+    // var selectedProduct= products.filter(product => product["id"] == productId);
     let arrSelectedProducts = [];
     let arrOrderedProducts = getFromLS("order");
     if(arrOrderedProducts!=null){
@@ -197,7 +341,7 @@ function change(){
      return filterArr;
  }
 
- //Sortiranje cemo posle!!!!!!!!!!!!!!!
+ 
  function sortMenu(arrProducts){
      let sortProducts = [];
      let choice = $("#sort").val();
@@ -282,7 +426,7 @@ function printMenu(menuElements){
               <h5 class="card-title">${objMenu.name}</h5>
               <p class="card-text">${objMenu.description}</p>
               <!-- Button trigger modal -->
-            <button id="${objMenu.id}" type="button" class="btn btnc order">${objMenu.price} din</button>
+            <button id="${objMenu.id}" type="button" class="btn btnc order">${objMenu.price} din - Add it to your order!</button>
 
             <!-- Modal -->
             </div>
@@ -302,6 +446,8 @@ function printSelect(selectElements, div){
     }
     $(div).html(content);
 }
+
+
 
 
 
