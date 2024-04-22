@@ -229,15 +229,7 @@ function printOrder(){
             </tr>
           </thead>
           <tbody>`
-    //         <tr>
-    //           <th scope="row">1</th>
-    //           <td>Mark</td>
-    //           <td>Otto</td>
-    //           <td>@mdo</td>
-    //         </tr>
-    //       </tbody>
-    //     </table>
-    //   </div>`
+
         for(let ord of orderFromLS){
                 content+=`<tr>
                       <th scope="row">${counter++}</th>
@@ -453,4 +445,4 @@ function printSelect(selectElements, div){
 
 
 var footer = document.getElementById("ft");
-footer.innerHTML="<p class='mb-0 p-1'>&copy All rights reserved Vladimir Jesic 2024. | <a href='index.html' target='_blank'>Documentation</a> | <a href='index.html' target='_blank'>Sitemap</a></p>"
+footer.innerHTML="<p class='mb-0 p-1'>&copy All rights reserved Vladimir Jesic 2024. | <a href='dokumentacija-wp2.pdf' target='_blank'>Documentation</a> | <a href='sitemap.xml' target='_blank'>Sitemap</a></p>"
