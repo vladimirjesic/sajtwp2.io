@@ -445,4 +445,4 @@ function printSelect(selectElements, div){
 
 
 var footer = document.getElementById("ft");
-footer.innerHTML="<p class='mb-0 p-1'>&copy All rights reserved Vladimir Jesic 2024. | <a href='dokumentacija-wp2.pdf' target='_blank'>Documentation</a> | <a href='sitemap.xml' target='_blank'>Sitemap</a></p>"
+footer.innerHTML="<p class='mb-0 p-1'>&copy All rights reserved Vladimir Jesic 2024. | <a href='dokumentacija1-wp2.pdf' target='_blank'>Documentation</a> | <a href='sitemap.xml' target='_blank'>Sitemap</a></p>"
