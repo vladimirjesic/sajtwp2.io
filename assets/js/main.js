@@ -60,7 +60,8 @@ window.onload = function(){
     $(document).on("blur", "#adress", checkFields);
     $(document).on("blur", "#phone", checkPhone);
     $(document).on("blur", "#phone", checkFields);
-    $(document).on("change", "#payment", checkFields);
+    $(document).on("change", "#cash", checkFields);
+    $(document).on("change", "#card", checkFields);
     $(document).on("change", "#transport", checkFields);
     $(document).on("click", "#orderBtn", completeOrder);
     $("#orderBtn").prop("disabled",true);
